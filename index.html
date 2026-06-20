@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>The D.R.O.P Kitchen — Diverse Recipes Outstanding Palatte</title>
+  <meta name="description" content="The D.R.O.P Kitchen — Diverse Recipes Outstanding Palatte. Seasonings and sauces that simplify and amplify everyday cooking."/>
+  <meta property="og:title" content="The D.R.O.P Kitchen"/>
+  <meta property="og:description" content="Food is memory, mood, and mischief all at once. Small jars and bottles that make those moments happen."/>
+  <meta property="og:image" content="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1e030ea4-510b-428e-b328-7f72d7d7b267.png"/>
+  <link rel="preconnect" href="https://api.fontshare.com"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{
+      --bg:#f7f2eb;--surface:#fcfaf6;--surface-2:#f1e8dc;--divider:#dbc8b2;
+      --border:rgba(53,32,17,.12);--text:#24160d;--muted:#6b5847;--inverse:#fff8f0;
+      --primary:#914116;--primary-h:#75310d;--primary-hl:#eedbcc;
+      --s-sm:0 2px 6px rgba(36,22,13,.05);--s-md:0 12px 32px rgba(36,22,13,.08);--s-lg:0 24px 64px rgba(36,22,13,.12);
+      --r-md:.75rem;--r-lg:1.25rem;--r-xl:1.75rem;--r-full:9999px;
+      --ease:180ms cubic-bezier(.16,1,.3,1);
+      --sp3:.75rem;--sp4:1rem;--sp5:1.25rem;--sp6:1.5rem;--sp8:2rem;--sp10:2.5rem;--sp12:3rem;--sp16:4rem;--sp24:6rem;
+      --xs:clamp(.75rem,.7rem + .25vw,.875rem);--sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --base:clamp(1rem,.95rem + .25vw,1.125rem);--lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --2xl:clamp(2.2rem,1.2rem + 3vw,4.75rem);--hero:clamp(3.3rem,1.2rem + 5.6vw,6.8rem);
+      --body:'Satoshi','Inter',sans-serif;--display:'Instrument Serif',Georgia,serif;
+      --max:1160px;--wide:1280px;
+    }
+    [data-theme="dark"]{
+      --bg:#17110d;--surface:#211914;--surface-2:#2a2018;--divider:#514033;
+      --border:rgba(255,240,224,.1);--text:#f3e7d9;--muted:#c8b59f;--inverse:#1d130d;
+      --primary:#d08649;--primary-h:#e09a5f;--primary-hl:#4a3526;
+      --s-sm:0 2px 6px rgba(0,0,0,.18);--s-md:0 12px 32px rgba(0,0,0,.28);--s-lg:0 24px 64px rgba(0,0,0,.36);
+    }
+    *,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+    body{min-height:100dvh;font-family:var(--body);font-size:var(--base);line-height:1.65;color:var(--text);background:var(--bg)}
+    img,svg{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button,input{font:inherit;color:inherit}
+    h1,h2,h3{line-height:1.05;text-wrap:balance}
+    p{max-width:70ch;color:var(--muted)}
+    .container{width:min(calc(100% - 2rem),var(--max));margin-inline:auto}
+    .wide{width:min(calc(100% - 2rem),var(--wide));margin-inline:auto}
+    .section{padding-block:clamp(var(--sp12),8vw,var(--sp24))}
+    .eyebrow{font-size:var(--xs);text-transform:uppercase;letter-spacing:.18em;color:var(--primary);font-weight:700}
+    .small{font-size:var(--sm);color:var(--muted)}
+    .section-title{font-family:var(--display);font-size:var(--2xl);margin:.5rem 0 1rem}
+    .tag{display:inline-flex;align-self:flex-start;padding:.4rem .75rem;border-radius:var(--r-full);background:var(--primary-hl);color:var(--primary);font-size:var(--xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .nav{position:sticky;top:0;z-index:120;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:var(--sp6);padding:var(--sp4) 0}
+    .brand{display:flex;align-items:center;gap:var(--sp3);font-weight:700}
+    .bmark{width:2.8rem;height:2.8rem;border-radius:var(--r-md);display:grid;place-items:center;background:linear-gradient(145deg,var(--primary-hl),transparent),var(--surface-2);border:1px solid var(--border);box-shadow:var(--s-sm)}
+    .bmark svg{width:1.65rem;height:1.65rem}
+    .nav-links{display:flex;gap:var(--sp6);font-size:var(--sm);color:var(--muted)}
+    .nav-actions{display:flex;align-items:center;gap:var(--sp3)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:44px;padding:.9rem 1.25rem;border-radius:var(--r-full);border:1px solid transparent;font-size:var(--sm);font-weight:700;cursor:pointer;transition:all var(--ease)}
+    .btn-p{background:var(--primary);color:var(--inverse);box-shadow:var(--s-md)}
+    .btn-p:hover{background:var(--primary-h);transform:translateY(-1px)}
+    .btn-s{background:transparent;border-color:var(--border)}
+    .btn-s:hover{background:var(--surface)}
+    .tt{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+    .hero{padding-top:clamp(var(--sp12),9vw,var(--sp24));padding-bottom:var(--sp16)}
+    .hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(var(--sp8),5vw,var(--sp16));align-items:center}
+    .hero h1{font-family:var(--display);font-size:var(--hero);margin:.5rem 0 1.25rem}
+    .hero p.lead{font-size:var(--lg);margin-bottom:var(--sp8)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp3);margin-bottom:var(--sp8)}
+    .hero-card{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--border);box-shadow:var(--s-lg);background:var(--surface)}
+    .hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+    .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp4)}
+    .note{background:var(--surface);border:1px solid var(--border);padding:var(--sp4);border-radius:var(--r-lg);box-shadow:var(--s-sm)}
+    .note strong{display:block;margin-bottom:.25rem}
+    .split{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(var(--sp8),5vw,var(--sp16));align-items:center}
+    .split img{border-radius:var(--r-xl);border:1px solid var(--border);box-shadow:var(--s-lg);width:100%;object-fit:cover}
+    .product-feature{padding-block:clamp(var(--sp12),8vw,var(--sp24));background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .product-feature-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--sp8),5vw,var(--sp16));align-items:center}
+    .product-feature-inner img{border-radius:var(--r-xl);border:1px solid var(--border);box-shadow:var(--s-lg);width:100%;object-fit:cover;aspect-ratio:1/1}
+    .lineup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp4);margin-top:var(--sp8)}
+    .pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp6);box-shadow:var(--s-sm);display:flex;flex-direction:column;gap:var(--sp3)}
+    .pcard h3{font-size:var(--lg)}
+    .why{padding-top:var(--sp3);border-top:1px solid var(--divider)}
+    .product-actions{display:flex;gap:var(--sp3);flex-wrap:wrap;margin-top:auto;padding-top:var(--sp4)}
+    .product-actions .btn{flex:1 1 140px}
+    .use-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp8);align-items:start}
+    .use-box{background:var(--surface);border:1px solid var(--border);border-radius:calc(var(--r-xl) + .25rem);padding:var(--sp8);box-shadow:var(--s-lg)}
+    .steps{display:grid;gap:var(--sp4);margin-top:var(--sp6)}
+    .step{padding-bottom:var(--sp4);border-bottom:1px solid var(--divider)}
+    .step:last-child{border-bottom:none;padding-bottom:0}
+    .cta{background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 8%,var(--surface)) 0%,var(--surface) 100%);border:1px solid var(--border);border-radius:calc(var(--r-xl) + .25rem);padding:var(--sp10);box-shadow:var(--s-lg)}
+    .newsletter{display:flex;gap:var(--sp3);flex-wrap:wrap;margin-top:var(--sp6)}
+    .newsletter input{flex:1 1 240px;min-height:50px;padding:0 1rem;border-radius:var(--r-full);border:1px solid var(--border);background:var(--bg)}
+    footer{padding:var(--sp8) 0 var(--sp12);border-top:1px solid var(--border);margin-top:var(--sp12)}
+    .footer-g{display:flex;justify-content:space-between;gap:var(--sp6);flex-wrap:wrap}
+    @media(max-width:1024px){
+      .hero-g,.split,.use-grid,.product-feature-inner{grid-template-columns:1fr}
+      .lineup-grid{grid-template-columns:repeat(2,1fr)}
+      .trio{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hero-card img,.split img{aspect-ratio:4/3}
+    }
+    @media(max-width:720px){
+      .lineup-grid{grid-template-columns:1fr}
+      .cta,.use-box{padding:var(--sp6)}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="The D.R.O.P Kitchen home">
+      <span class="bmark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 42C15 29.85 24.85 20 37 20H50V29C50 41.15 40.15 51 28 51H15V42Z" stroke="currentColor" stroke-width="3.2"/>
+          <path d="M22 16H27M31 12H36M40 16H45" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>The D.R.O.P Kitchen</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#pitch">Story</a>
+      <a href="#products">Collection</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#use">How to Use</a>
+      <a href="#start">First Drop</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="tt" data-tt aria-label="Switch theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <a class="btn btn-p" href="#start">Join the first drop</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wide" id="top">
+    <div class="hero-g">
+      <div class="hero-copy">
+        <div class="eyebrow">Diverse Recipes Outstanding Palatte</div>
+        <h1>Small jars. Big memory. Zero wasted motion.</h1>
+        <p class="lead">Food is memory, mood, and mischief all at once. The D.R.O.P Kitchen hands you the little jars and bottles that make those moments happen. Each seasoning and sauce is a tiny promise: more flavor, less fuss.</p>
+        <div class="hero-actions">
+          <a class="btn btn-p" href="#lineup">Meet the lineup</a>
+          <a class="btn btn-s" href="#use">See how to use them</a>
+        </div>
+        <div class="trio">
+          <div class="note"><strong>Pick one</strong><span class="small">A single bottle can rescue a tired dinner.</span></div>
+          <div class="note"><strong>Pair two</strong><span class="small">Layer depth, brightness, or heat with ease.</span></div>
+          <div class="note"><strong>Build a ritual</strong><span class="small">Turn repeat meals into confident habits.</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1e030ea4-510b-428e-b328-7f72d7d7b267.png" alt="The full D.R.O.P Kitchen lineup flat lay" width="1024" height="768" fetchpriority="high"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- PITCH -->
+  <section class="section" id="pitch">
+    <div class="container split">
+      <div>
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/56e30093-57ae-49d2-a18f-692e5e4939fb.png" alt="Chef using labeled D.R.O.P Kitchen jars in moody kitchen" width="1024" height="1024" loading="lazy"/>
+      </div>
+      <div>
+        <div class="eyebrow">Hero pitch</div>
+        <h2 class="section-title">Cook with confidence, not complication.</h2>
+        <p>The D.R.O.P Kitchen is built around a simple idea: the right bottle can change the whole mood of the plate. These sauces and seasonings are designed to simplify and amplify, giving you fast access to depth, comfort, brightness, heat, and ritual — without making dinner feel like a project.</p>
+        <p style="margin-top:1rem">Every bottle is an invitation to cook with confidence. Use one, combine two, or build a pantry rhythm that makes your kitchen feel fearless.</p>
+        <div style="margin-top:var(--sp8);display:flex;gap:var(--sp3);flex-wrap:wrap">
+          <a class="btn btn-p" href="#lineup">See all 9 products</a>
+          <a class="btn btn-s" href="#start">Join the first drop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT FEATURE -->
+  <section class="product-feature" id="products">
+    <div class="container product-feature-inner">
+      <div>
+        <div class="eyebrow">The full collection</div>
+        <h2 class="section-title">Nine products. One fearless pantry.</h2>
+        <p>Each jar in the D.R.O.P Kitchen lineup has a distinct personality, job, and flavor world. Together they cover every mood, meal, and moment — from weeknight rescue to weekend ritual.</p>
+        <p style="margin-top:1rem">Mix and match to build your own system, or start with one and let it earn its place on the counter.</p>
+        <div style="margin-top:var(--sp6);display:flex;flex-direction:column;gap:var(--sp3)">
+          <span class="small">&#x2713; Block Party BBQ &nbsp;&middot;&nbsp; House Drip &nbsp;&middot;&nbsp; Heat Check</span>
+          <span class="small">&#x2713; House Standard &nbsp;&middot;&nbsp; Island Gold &nbsp;&middot;&nbsp; Heart-Smart Blend</span>
+          <span class="small">&#x2713; Aegean Aura &nbsp;&middot;&nbsp; Umami Reserve &nbsp;&middot;&nbsp; Cin &amp; Sug</span>
+        </div>
+        <a class="btn btn-p" href="#lineup" style="margin-top:var(--sp6)">Shop the full lineup</a>
+      </div>
+      <div>
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ec4e98dd-4bf8-4ea6-b7b1-e16b9e729e31.png" alt="Nine D.R.O.P Kitchen products in branded 3x3 grid" width="1024" height="1024" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINEUP + PURCHASE BUTTONS -->
+  <section class="section" id="lineup">
+    <div class="container">
+      <div class="eyebrow">The lineup</div>
+      <h2 class="section-title">Nine seasonings and sauces. Each one earns its spot.</h2>
+      <p>Click <strong>Buy / Preorder</strong> on any product. Replace each <code>href="#start"</code> with your real Gumroad, Shopify, or Square product URL.</p>
+      <div class="lineup-grid">
+
+        <article class="pcard">
+          <span class="tag">Sweet smoke</span>
+          <h3>Block Party BBQ</h3>
+          <p>Sweet smoke and a sticky, friendly finish. Slather on ribs, glaze roasted carrots, or toss with pulled pork for that neighborhood cookout energy.</p>
+          <p class="why"><strong>Why it works:</strong> crowd-pleasing sweetness that still lets the grill speak.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Umami drip</span>
+          <h3>House Drip</h3>
+          <p>Silky, umami-rich, and endlessly useful. Drizzle over grain bowls, finish a steak, or fold into mayo for a sandwich that tastes like you stayed up learning a secret.</p>
+          <p class="why"><strong>Why it works:</strong> it's the chef's little trick you can use every night.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Built heat</span>
+          <h3>Heat Check</h3>
+          <p>Focused, honest heat that builds flavor instead of hiding it. Add to tacos, stir into soups, or spike your late-night noodles.</p>
+          <p class="why"><strong>Why it works:</strong> it wakes the dish without stealing the show.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Core blend</span>
+          <h3>House Standard</h3>
+          <p>Balanced, reliable, and quietly brilliant. Season roasted potatoes, coat chicken before searing, or rim a Bloody Mary.</p>
+          <p class="why"><strong>Why it works:</strong> the seasoning you reach for when dinner needs to feel effortless and deliberate.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Island lift</span>
+          <h3>Island Gold</h3>
+          <p>Bright citrus, warm smoke, and a tropical nudge. Use on shrimp, jerk chicken, or grilled pineapple to make weeknights feel like a short escape.</p>
+          <p class="why"><strong>Why it works:</strong> it brings sunshine to the plate without fuss.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">No sodium</span>
+          <h3>Heart-Smart Blend</h3>
+          <p>All the aroma and depth with no added sodium. Sprinkle on steamed greens, mix into grain bowls, or use where health and flavor need to meet.</p>
+          <p class="why"><strong>Why it works:</strong> mindful eating that still tastes like joy.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Mediterranean</span>
+          <h3>Aegean Aura</h3>
+          <p>Herbs, citrus, and sun-warmed calm. Toss with olive oil for bread dipping, season fish before roasting, or brighten a salad with a single shake.</p>
+          <p class="why"><strong>Why it works:</strong> it's the Mediterranean in a pinch.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Deep savor</span>
+          <h3>Umami Reserve</h3>
+          <p>Deep, savory layers that make simple things sing. Stir into broths, rub on pork belly, or fold into mushroom dishes for instant richness.</p>
+          <p class="why"><strong>Why it works:</strong> the secret note that turns good into unforgettable.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <span class="tag">Sweet ritual</span>
+          <h3>Cin &amp; Sug</h3>
+          <p>Warm toasted cinnamon and crisp cane crystals for morning rituals and sweet finishes. Dust on toast, rim a latte, or sprinkle over roasted fruit.</p>
+          <p class="why"><strong>Why it works:</strong> it turns small moments into rituals.</p>
+          <div class="product-actions">
+            <a class="btn btn-p" href="#start">Buy / Preorder</a>
+            <a class="btn btn-s" href="#start">Learn more</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE + CTA -->
+  <section class="section" id="use">
+    <div class="container use-grid">
+      <div class="use-box">
+        <div class="eyebrow">How to use them together</div>
+        <h2 class="section-title">Make your pantry feel like a tiny, fearless kitchen.</h2>
+        <div class="steps">
+          <div class="step"><strong>Start with House Standard.</strong><p>Your base layer — dependable flavor and a clean starting point for almost any meal.</p></div>
+          <div class="step"><strong>Add House Drip for depth.</strong><p>That extra savory finish elevates grain bowls, proteins, and sandwiches instantly.</p></div>
+          <div class="step"><strong>Bring in Heat Check if you want a kick.</strong><p>It sharpens the dish without covering everything else up.</p></div>
+          <div class="step"><strong>Finish by mood.</strong><p>Aegean Aura for brightness and calm. Island Gold for warmth and a tropical nudge.</p></div>
+          <div class="step"><strong>Reach for Cin &amp; Sug on coffee and dessert.</strong><p>Turn small sweet moments into repeatable rituals.</p></div>
+          <div class="step"><strong>Swap in Heart-Smart Blend anytime.</strong><p>All the same intent and pleasure — with no added sodium.</p></div>
+        </div>
+      </div>
+      <div class="cta" id="start">
+        <div class="eyebrow">Start tonight</div>
+        <h2 class="section-title">Simplify. Amplify. Remember the bite.</h2>
+        <p>The D.R.O.P Kitchen is about choices that rescue tired dinners, reward curiosity, and make every bite worth remembering. <em>Diverse Recipes Outstanding Palatte</em> is not just a line on a label. It is permission to experiment.</p>
+        <p style="margin-top:1rem">Try one. Try them all. Let your pantry do the rest.</p>
+        <form class="newsletter" onsubmit="event.preventDefault();alert('Replace this with your Gumroad, ConvertKit, or preorder URL.');">
+          <label for="drop-email" style="position:absolute;left:-9999px">Email address</label>
+          <input id="drop-email" type="email" required placeholder="Email for first-drop access"/>
+          <button class="btn btn-p" type="submit">Join the first drop</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-g">
+    <div>
+      <div class="brand" style="margin-bottom:.75rem">
+        <span class="bmark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 42C15 29.85 24.85 20 37 20H50V29C50 41.15 40.15 51 28 51H15V42Z" stroke="currentColor" stroke-width="3.2"/>
+            <path d="M22 16H27M31 12H36M40 16H45" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>The D.R.O.P Kitchen</span>
+      </div>
+      <p class="small">Diverse Recipes Outstanding Palatte &nbsp;&middot;&nbsp; Part of the Vision:MB ecosystem</p>
+    </div>
+    <p class="small">Premium yet approachable flavor architecture for weeknights, gatherings, and repeat rituals.</p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const btn  = document.querySelector('[data-tt]');
+    const root = document.documentElement;
+    let t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', t);
+    const render = () => {
+      btn.innerHTML = t === 'dark'
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      btn.setAttribute('aria-label', 'Switch to ' + (t === 'dark' ? 'light' : 'dark') + ' mode');
+    };
+    render();
+    btn.addEventListener('click', () => { t = t === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', t); render(); });
+  })();
+</script>
+</body>
+</html>
